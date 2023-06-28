@@ -13,14 +13,21 @@
         <main>
             <form action="">
                 <label for="name" class="form__label">Ваше имя:</label>
-                <input type="text" id="name"  class="form__input" required />
-                <br />
+                <input type="text" id="name" placeholder="имя" minlength="2" maxlength="20" class="form__input" required />
+                    <br />
                 <label for="email" class="form__label">Ваш E-mail:</label>
-				<input type="email" id="email" class="form__input" />
-                <br />
+				<input type="email" id="email" placeholder="e-mail" class="form__input" required/>
+                    <br />
                 <label for="age" class="form__label">Ваш возраст:</label>
                 <!-- Тут надо задать от 18 до 99 -->
-				<input type="num" id="age" class="form__input" />  
+				<input type="number" id="age" placeholder="возраст"  class="form__input" required/>
+                    <br /> 
+                <div class="form__label">Ваш пол:</div>
+                <label for="gender">Женщина</label>
+                <input type="radio" name="gender" class="form__input" />
+                <label for="gender">Мужчина</label>
+                <input type="radio" name="gender" class="form__input" />
+			    
             </form>
         </main>
     </div>
