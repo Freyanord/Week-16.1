@@ -12,49 +12,62 @@
         </header>
         <main>
             <form novalidate>
-                <label for="name" class="form__label">Ваше имя:</label>
-                <input type="text" id="name" placeholder="имя" minlength="2" maxlength="20" class="form__input" required />
-                <span class="error-message" id="errorMessage"></span>
+                <div class="form__label">
+                    <label for="name" class="form__label">Ваше имя:</label>
+                    <input type="text" id="name" placeholder="имя" minlength="2" maxlength="20" class="form__input" required />
+                    <span class="error-message" id="errorMessage"></span>
+                </div>
                     <br />
-                <label for="email" class="form__label">Ваш E-mail:</label>
+                <div class="form__label">
+                    <label for="email" class="form__label">Ваш E-mail:</label>
 				<input type="email" id="email" placeholder="e-mail" class="form__input" required/>
-                <span class="error-message" id="errorMessage"></span>
+                    <span class="error-message" id="errorMessage"></span>
+                </div>
                     <br />
-                <label for="age" class="form__label">Ваш возраст:</label>
-                <!-- Тут надо задать от 18 до 99 -->
+                <div class="form__label">
+                    <label for="age" class="form__label">Ваш возраст:</label>
+                    <!-- Тут надо задать от 18 до 99 -->
 				<input type="number" id="age" placeholder="возраст" class="form__input" required/>
-                <span class="error-message" id="errorMessage"></span>
+                    <span class="error-message" id="errorMessage"></span>
+                </div>
                     <br /> 
                 <div class="form__label">Ваш пол:
                     <label for="gender">Женщина</label>
-                <input type="radio" name="gender" class="form__input" />
-                <label for="gender">Мужчина</label>
-                <input type="radio" name="gender" class="form__input" />
+                    <input type="radio" name="gender" class="form__input" />
+                    <label for="gender">Мужчина</label>
+                    <input type="radio" name="gender" class="form__input" />
                 </div>
-                
                     <br />
-                <label for="profession" class="form__label">Ваша профессия:</label>
-						<select id="profession" name="profession" class="form__select" required>
-							<option value="Опция 1">Врач</option>
-							<option value="Опция 2">Программист</option>
-							<option value="Опция 3">Учитель</option>
-                            <option value="Опция 4">Дизайнер</option>
-							<option value="Опция 5">Инженер</option>
-							<option value="Опция 6">Продавец</option>
-                            <option value="Опция 7">Другое</option>
+                <div class="form__label">
+                    <label for="profession">Ваша профессия:</label>
+					<select id="profession" name="profession" class="form__select" required>
+						<option value="Опция 1">Врач</option>
+						<option value="Опция 2">Программист</option>
+						<option value="Опция 3">Учитель</option>
+                        <option value="Опция 4">Дизайнер</option>
+						<option value="Опция 5">Инженер</option>
+						<option value="Опция 6">Продавец</option>
+                        <option value="Опция 7">Другое</option>
 						</select>
-                        <br />
-                <label for="password" class="form__label">Придумайте пароль</label>
-                <input type="text" id="password" placeholder="введите пароль" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
-                class="form__input" required />
-                <br />
-                <label for="password1" class="form__label">Повторите пароль</label>
-                <input type="text" id="password1" placeholder="введите пароль" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
-                class="form__input" required />
-                <br />
-                <label for="checkbox">Даю согласие на обработку данных</label>
-                <input type="checkbox" id="checkbox" class="form__checkbox" required/>
-				<br />
+                </div>
+                    <br />
+                <div class="form__label">
+                    <label for="password" class="form__label">Придумайте пароль</label>
+                    <input type="text" id="password" placeholder="введите пароль" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                    class="form__input" required />
+                </div>
+                    <br />
+                <div class="form__label">
+                    <label for="password1" class="form__label">Повторите пароль</label>
+                    <input type="text" id="password1" placeholder="введите пароль" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                    class="form__input" required />
+                </div>
+                    <br />
+                <div class="form__label">
+                    <label for="checkbox">Даю согласие на обработку данных</label>
+                    <input type="checkbox" id="checkbox" class="form__checkbox" required/>
+                </div>
+			<br />
                 <button type="submit" name="b-12" class="form__submit">Отправить</button>
             </form>
         </main>
