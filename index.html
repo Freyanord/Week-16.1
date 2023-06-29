@@ -27,15 +27,32 @@
                 <input type="radio" name="gender" class="form__input" />
                 <label for="gender">Мужчина</label>
                 <input type="radio" name="gender" class="form__input" />
-			    <br />
-                <label for="profession" class="form__label" required>Ваша профессия:</label>
-						<select id="profession" name="profession" class="form__select">
+                    <br />
+                <label for="profession" class="form__label">Ваша профессия:</label>
+						<select id="profession" name="profession" class="form__select" required>
 							<option value="Опция 1">Врач</option>
 							<option value="Опция 2">Программист</option>
 							<option value="Опция 3">Учитель</option>
+                            <option value="Опция 4">Дизайнер</option>
+							<option value="Опция 5">Инженер</option>
+							<option value="Опция 6">Продавец</option>
+                            <option value="Опция 7">Другое</option>
 						</select>
+                        <br />
+                <label for="password" class="form__label">Придумайте пароль</label>
+                <input type="text" id="password" placeholder="введите пароль" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                class="form__input" required />
+                <br />
+                <label for="password1" class="form__label">Повторите пароль</label>
+                <input type="text" id="password1" placeholder="введите пароль" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                class="form__input" required />
+                <br />
+                
             </form>
         </main>
+
+
+        <script src="index.js"></script>
     </div>
 </body>
 </html>
