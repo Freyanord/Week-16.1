@@ -11,22 +11,27 @@
             <h2>Регистрация пользователя</h2>
         </header>
         <main>
-            <form action="">
+            <form novalidate>
                 <label for="name" class="form__label">Ваше имя:</label>
                 <input type="text" id="name" placeholder="имя" minlength="2" maxlength="20" class="form__input" required />
+                <span class="error-message" id="errorMessage"></span>
                     <br />
                 <label for="email" class="form__label">Ваш E-mail:</label>
 				<input type="email" id="email" placeholder="e-mail" class="form__input" required/>
+                <span class="error-message" id="errorMessage"></span>
                     <br />
                 <label for="age" class="form__label">Ваш возраст:</label>
                 <!-- Тут надо задать от 18 до 99 -->
-				<input type="number" id="age" placeholder="возраст"  class="form__input" required/>
+				<input type="number" id="age" placeholder="возраст" class="form__input" required/>
+                <span class="error-message" id="errorMessage"></span>
                     <br /> 
-                <div class="form__label">Ваш пол:</div>
-                <label for="gender">Женщина</label>
+                <div class="form__label">Ваш пол:
+                    <label for="gender">Женщина</label>
                 <input type="radio" name="gender" class="form__input" />
                 <label for="gender">Мужчина</label>
                 <input type="radio" name="gender" class="form__input" />
+                </div>
+                
                     <br />
                 <label for="profession" class="form__label">Ваша профессия:</label>
 						<select id="profession" name="profession" class="form__select" required>
@@ -47,11 +52,12 @@
                 <input type="text" id="password1" placeholder="введите пароль" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
                 class="form__input" required />
                 <br />
-                
+                <label for="checkbox">Даю согласие на обработку данных</label>
+                <input type="checkbox" id="checkbox" class="form__checkbox" required/>
+				<br />
+                <button type="submit" name="b-12" class="form__submit">Отправить</button>
             </form>
         </main>
-
-
         <script src="index.js"></script>
     </div>
 </body>
