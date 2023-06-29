@@ -1,7 +1,8 @@
-// const formElement = document.querySelector('.form');
-// const formInput = formElement.querySelector('.form__input');
+const formElement = document.querySelector('.form');
+const formInput = formElement.querySelector('.form__input');
 
 let errors = [];
+
 function checkValidity(input) {
     let validity = input.validity;
     if (validity.valueMissing) 
@@ -17,19 +18,24 @@ function checkValidity(input) {
 }
 
 function checkAll() {
-    errors = [];
     let inputs = document.querySelectorAll('input');
 
     for (let input of inputs) {
         checkValidity(input);
     }
 
-document.getElementById('errorMessage').innerHTML = errors.join('. <br>');
+let errorDiv = document.getElementById('errorMessage');
+errorDiv.innerHTML = errors.join('. \n');
 }
 
-
-form.addEventListener('submit', function (evt) {
+formElement.addEventListener('submit', function (evt) {
     evt.preventDefault();
-    form.reset();
+    // form.reset();
+    errors = [];
     checkAll();
 });
+
+formInput.addEventListener('input', function (evt) {
+    console.log(evt.target.value);
+  });
+

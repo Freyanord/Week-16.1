@@ -15,20 +15,17 @@
                 <div class="form__label">
                     <label for="name" class="form__label">Ваше имя:</label>
                     <input type="text" id="name" placeholder="имя" minlength="2" maxlength="20" class="form__input" required />
-                    <span class="error-message" id="errorMessage"></span>
                 </div>
                     <br />
                 <div class="form__label">
                     <label for="email" class="form__label">Ваш E-mail:</label>
 				<input type="email" id="email" placeholder="e-mail" class="form__input" required/>
-                    <span class="error-message" id="errorMessage"></span>
                 </div>
                     <br />
                 <div class="form__label">
                     <label for="age" class="form__label">Ваш возраст:</label>
                     <!-- Тут надо задать от 18 до 99 -->
 				<input type="number" id="age" placeholder="возраст" class="form__input" required/>
-                    <span class="error-message" id="errorMessage"></span>
                 </div>
                     <br /> 
                 <div class="form__label">Ваш пол:
@@ -69,6 +66,7 @@
                 </div>
 			<br />
                 <button type="submit" name="b-12" class="form__submit">Отправить</button>
+                <span class="error-message" id="errorMessage"></span>
             </form>
         </main>
         <script src="index.js"></script>
